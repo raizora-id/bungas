@@ -1,0 +1,25 @@
+{
+  "extends": "@tooling/typescript-config/nextjs.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@repo/*": [
+        "../*"
+      ],
+      "@/components/*": [
+        "../shadcn-ui/components/*"
+      ],
+      "@/lib/*": [
+        "../shadcn-ui/lib/*"
+      ]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
