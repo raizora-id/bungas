@@ -1,5 +1,5 @@
 {
-  "name": "@jurassicjs/web",
+  "name": "@bungas/web",
   "version": "0.0.1",
   "lock": false,
   "tasks": {
@@ -24,8 +24,8 @@
     "**/_fresh/*"
   ],
   "imports": {
-    "@jurassicjs/roar": "../../packages/roar/mod.ts",
-    "@jurassicjs/ui": "../../packages/ui/mod.ts",
+    "@bungas/roar": "../../packages/roar/mod.ts",
+    "@bungas/ui": "../../packages/ui/mod.ts",
     "$fresh/": "https://deno.land/x/fresh@1.6.8/",
     "preact": "https://esm.sh/preact@10.19.6",
     "preact/": "https://esm.sh/preact@10.19.6/",
