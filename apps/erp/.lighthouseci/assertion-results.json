@@ -1,0 +1,147 @@
+[
+  {
+    "name": "auditRan",
+    "expected": 1,
+    "actual": 0,
+    "values": [
+      0,
+      0,
+      0
+    ],
+    "operator": ">=",
+    "passed": false,
+    "auditProperty": "pwa",
+    "auditId": "categories",
+    "level": "error",
+    "url": "https://www.google.com/"
+  },
+  {
+    "name": "auditRan",
+    "expected": 1,
+    "actual": 0,
+    "values": [
+      0,
+      0,
+      0
+    ],
+    "operator": ">=",
+    "passed": false,
+    "message": "\"offline-start-url\" is not a known audit.",
+    "auditId": "offline-start-url",
+    "level": "error",
+    "url": "https://www.google.com/"
+  },
+  {
+    "name": "auditRan",
+    "expected": 1,
+    "actual": 0,
+    "values": [
+      0,
+      0,
+      0
+    ],
+    "operator": ">=",
+    "passed": false,
+    "message": "\"service-worker\" is not a known audit.",
+    "auditId": "service-worker",
+    "level": "error",
+    "url": "https://www.google.com/"
+  },
+  {
+    "name": "auditRan",
+    "expected": 1,
+    "actual": 0,
+    "values": [
+      0,
+      0,
+      0
+    ],
+    "operator": ">=",
+    "passed": false,
+    "message": "\"installable-manifest\" is not a known audit.",
+    "auditId": "installable-manifest",
+    "level": "error",
+    "url": "https://www.google.com/"
+  },
+  {
+    "name": "auditRan",
+    "expected": 1,
+    "actual": 0,
+    "values": [
+      0,
+      0,
+      0
+    ],
+    "operator": ">=",
+    "passed": false,
+    "message": "\"splash-screen\" is not a known audit.",
+    "auditId": "splash-screen",
+    "level": "warning",
+    "url": "https://www.google.com/"
+  },
+  {
+    "name": "auditRan",
+    "expected": 1,
+    "actual": 0,
+    "values": [
+      0,
+      0,
+      0
+    ],
+    "operator": ">=",
+    "passed": false,
+    "message": "\"themed-omnibox\" is not a known audit.",
+    "auditId": "themed-omnibox",
+    "level": "warning",
+    "url": "https://www.google.com/"
+  },
+  {
+    "name": "auditRan",
+    "expected": 1,
+    "actual": 0,
+    "values": [
+      0,
+      0,
+      0
+    ],
+    "operator": ">=",
+    "passed": false,
+    "message": "\"content-width\" is not a known audit.",
+    "auditId": "content-width",
+    "level": "error",
+    "url": "https://www.google.com/"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.9,
+    "actual": 0,
+    "values": [
+      0,
+      0,
+      0
+    ],
+    "operator": ">=",
+    "passed": false,
+    "auditId": "viewport",
+    "level": "error",
+    "url": "https://www.google.com/",
+    "auditTitle": "Does not have a `<meta name=\"viewport\">` tag with `width` or `initial-scale`",
+    "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/pwa/viewport/"
+  },
+  {
+    "name": "auditRan",
+    "expected": 1,
+    "actual": 0,
+    "values": [
+      0,
+      0,
+      0
+    ],
+    "operator": ">=",
+    "passed": false,
+    "message": "\"apple-touch-icon\" is not a known audit.",
+    "auditId": "apple-touch-icon",
+    "level": "warning",
+    "url": "https://www.google.com/"
+  }
+]

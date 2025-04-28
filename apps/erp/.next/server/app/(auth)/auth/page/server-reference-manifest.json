@@ -1,0 +1,60 @@
+{
+  "node": {
+    "401c024b7491e2b989e06dfd4ba56efdd69f3e62f9": {
+      "workers": {
+        "app/(auth)/auth/page": {
+          "moduleId": "[project]/apps/erp/.next-internal/server/app/(auth)/auth/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/erp/src/i18n/index.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/apps/erp/src/i18n/request.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/apps/erp/src/shared/i18n/index.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(auth)/auth/page": "rsc"
+      }
+    },
+    "403159a432972012cbc9f525fa73ef9d37c7c50043": {
+      "workers": {
+        "app/(auth)/auth/page": {
+          "moduleId": "[project]/apps/erp/.next-internal/server/app/(auth)/auth/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/erp/src/i18n/index.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/apps/erp/src/i18n/request.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/apps/erp/src/shared/i18n/index.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(auth)/auth/page": "action-browser"
+      }
+    },
+    "7fc4ed7b11efd01779f4aafcbf7d8ea3d0a36676d5": {
+      "workers": {
+        "app/(auth)/auth/page": {
+          "moduleId": "[project]/apps/erp/.next-internal/server/app/(auth)/auth/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/erp/src/i18n/index.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/apps/erp/src/i18n/request.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/apps/erp/src/shared/i18n/index.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(auth)/auth/page": "rsc"
+      }
+    },
+    "00030b4c76057c24db34021212e6da2fb5932edcc4": {
+      "workers": {
+        "app/(auth)/auth/page": {
+          "moduleId": "[project]/apps/erp/.next-internal/server/app/(auth)/auth/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/erp/src/i18n/index.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/apps/erp/src/i18n/request.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/apps/erp/src/shared/i18n/index.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(auth)/auth/page": "rsc"
+      }
+    },
+    "0095bad9ce05d6533bd1aa469eb2ca8a8169fdb32e": {
+      "workers": {
+        "app/(auth)/auth/page": {
+          "moduleId": "[project]/apps/erp/.next-internal/server/app/(auth)/auth/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/erp/src/i18n/index.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/apps/erp/src/i18n/request.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/apps/erp/src/shared/i18n/index.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(auth)/auth/page": "action-browser"
+      }
+    }
+  },
+  "edge": {}
+}
