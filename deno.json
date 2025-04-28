@@ -1,0 +1,38 @@
+{
+  "lock": false,
+  "scripts": { "mono": "deno run -A monodeno.ts" },
+  "tasks": {
+    "mono": "deno run -A jsr:@jurassicjs/monodeno",
+    "check": "deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
+    "cli": "echo \"import '\\$fresh/src/dev/cli.ts'\" | deno run --unstable -A -",
+    "manifest": "deno task cli manifest $(pwd)",
+    "start": "deno run -A --watch=static/,routes/ dev.ts",
+    "build": "deno run -A dev.ts build",
+    "preview": "deno run -A main.ts",
+    "update": "deno run -A -r https://fresh.deno.dev/update ."
+  },
+  "lint": { "rules": { "tags": ["fresh", "recommended"] } },
+  "workspace": ["apps/web", "apps/docs"],
+  "exclude": ["**/_fresh/*"],
+  "imports": {
+    "@jurassicjs/ui": "./packages/ui/mod.ts",
+    "@jurassicjs/roar": "./packages/roar/mod.ts",
+    "$fresh/": "https://deno.land/x/fresh@1.7.3/",
+    "$std/": "https://deno.land/std@0.216.0/",
+    "@crayon/color-support": "jsr:@crayon/color-support@^2.0.0",
+    "@jurassicjs/monodeno": "jsr:@jurassicjs/monodeno@^0.0.11",
+    "@preact/signals": "https://esm.sh/*@preact/signals@1.2.2",
+    "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.1",
+    "preact": "https://esm.sh/preact@10.22.0",
+    "preact/": "https://esm.sh/preact@10.22.0/",
+    "tailwindcss": "npm:tailwindcss@4.0.0",
+    "tailwindcss/": "npm:/tailwindcss@4.0.0/",
+    "tailwindcss/plugin": "npm:/tailwindcss@4.0.0/plugin.js"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
+    "lib": ["dom", "esnext"]
+  },
+  "nodeModulesDir": "auto"
+}

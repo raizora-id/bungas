@@ -1,44 +1,53 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Binaries
+bin/
+*.exe
+*.dll
+*.so
+*.dylib
 
-# Dependencies
-node_modules
-.pnp
-.pnp.js
+# Build output
+/build/
+/dist/
+*.out
+*.o
+*.a
+*.test
 
-# Local env files
-.env
-.env*.local
+# Dependency directories
+/vendor/
 
-# Testing
-coverage
+# Go modules
+/go.sum
+/go.mod
 
-# Turbo
-.turbo
+# IDE/editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.bak
+*.tmp
 
-# Vercel
-.vercel
+# OS generated files
+.DS_Store
+Thumbs.db
 
-# Build Outputs
-.next/
-out/
-build
-dist
+# Logs
+*.log
 
+# Test cache
+*.testcache
 
-# Debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Coverage files
+*.coverprofile
+*.lcov
 
 # Misc
-.DS_Store
-*.pem
+*.env
+.env.*
 
-# Typescript
-*.tsbuildinfo
-next-env.d.ts
-*storybook.log
+# Git
+.git/
 
-# moon
-.moon/cache
-.moon/docker
+node_modules/
+public/
