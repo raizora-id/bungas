@@ -1,24 +1,62 @@
-# Roarify - A JurassicJS package for ferocious string transformations
+# Shared UI Library
 
-## Brief Description
+This is a shared UI library, a comprehensive collection of React components built with
+modern web development best practices. Under the hood, it uses Tailwind CSS, Radix UI,
+and TypeScript to deliver accessible, type-safe, and customizable components.
 
-Roarify is a (purposefully) simple JurassicJS test package designed to help
-developers understand the process of publishing packages to the Java Shared
-Repository. It provides a single function to make your strings mighty.
+The UI components leverage [shadcn/ui](https://ui.shadcn.com/) as their foundation,
+enhanced with custom modifications. The notable distinction lies in the styling
+implementation, which utilizes [Tailwind Variants](https://www.tailwind-variants.org/)
+for a more flexible approach and [tailwindcss-motion](https://rombo.co/tailwind) for
+animations and transitions effects.
 
-## Functionality
+## Enabling the package
 
-- **roar() function:**
-  - Takes a string as input.
-  - Returns the string in uppercase followed by a powerful "ROAR!".
+Add the following to your `package.json` file:
 
-## Installation
+```json
+{
+    "dependencies": {
+        "@repo/shared-ui": "workspace:*"
+    },
+    "devDependencies": {
+        "@tailwindcss/vite": "^4.1.4",
+        "tailwind-variants": "^1.0.0",
+        "tailwindcss-motion": "^1.1.0",
+        "tailwindcss": "^4.1.4",
+    }
+}
+```
 
-## Usage Example
+Add the following to your `tsconfig.json` file:
 
-```typescript
-import { roar } from "jsr:@jurassicjs/roar"; // Import from the JurassicJS organization
+```json
+{
+    "references": [{ "path": "../../packages/shared-ui" }]
+}
+```
 
-const input = "hello world";
-const mightyRoar = roar(input);
+Exclude internal packages from optimization, add the following to your `vite.config.ts` file:
+
+```ts
+export default defineConfig({
+  // ...
+  optimizeDeps: {
+    // Do not optimize internal workspace dependencies.
+    exclude: ['@repo/shared-ui'],
+  },
+})
+```
+
+Add `shared-ui` source list to `global.css`:
+
+```css
+@source "../../../../packages/shared-ui/**/*.{ts,tsx}";
+```
+
+Finally, add the following to your `moon.yml` file:
+
+```yaml
+dependsOn:
+  - 'shared-ui'
 ```

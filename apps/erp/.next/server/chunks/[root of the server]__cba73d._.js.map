@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 63, "column": 0}, "map": {"version":3,"sources":["file:///Users/ridho/Documents/go/github.com/red-ant-colony/web-monorepo/apps/erp/apps/erp/instrumentation.ts"],"sourcesContent":["import { diag, DiagConsoleLogger, DiagLogLevel } from '@opentelemetry/api';\nimport { registerOTel } from '@vercel/otel';\nimport { AlwaysOnSampler, TraceIdRatioBasedSampler } from '@opentelemetry/sdk-trace-node';\n\nconst isDev = process.env.NODE_ENV === 'development';\nconst hasOTLPEndpoint = !!process.env.OTEL_EXPORTER_OTLP_ENDPOINT;\n\nexport function register() {\n  diag.setLogger(new DiagConsoleLogger(), isDev ? DiagLogLevel.ALL : DiagLogLevel.ERROR);\n\n  registerOTel({\n    serviceName: '@rac/erp',\n    traceSampler: isDev\n      ? new AlwaysOnSampler()\n      : new TraceIdRatioBasedSampler(0.1),\n    ...(hasOTLPEndpoint\n      ? ({\n        otlpExporterConfig: {\n          url: process.env.OTEL_EXPORTER_OTLP_ENDPOINT!,\n        },\n      } as any)\n      : {}),\n  });\n}\n"],"names":[],"mappings":";;;AAAA;AACA;AACA;;;;AAEA,MAAM,QAAQ,oDAAyB;AACvC,MAAM,kBAAkB,CAAC,CAAC,QAAQ,GAAG,CAAC,2BAA2B;AAE1D,SAAS;IACd,qIAAA,CAAA,OAAI,CAAC,SAAS,CAAC,IAAI,qIAAA,CAAA,oBAAiB,IAAI,uCAAQ,qIAAA,CAAA,eAAY,CAAC,GAAG;IAEhE,CAAA,GAAA,sKAAA,CAAA,eAAY,AAAD,EAAE;QACX,aAAa;QACb,cAAc,uCACV,IAAI,6LAAA,CAAA,kBAAe;QAEvB,GAAI,kBACC;YACD,oBAAoB;gBAClB,KAAK,QAAQ,GAAG,CAAC,2BAA2B;YAC9C;QACF,IACE,CAAC,CAAC;IACR;AACF"}},
-    {"offset": {"line": 86, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}

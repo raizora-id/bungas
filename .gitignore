@@ -1,53 +1,117 @@
-# Binaries
-bin/
-*.exe
-*.dll
-*.so
-*.dylib
-
-# Build output
-/build/
-/dist/
-*.out
-*.o
-*.a
-*.test
-
-# Dependency directories
-/vendor/
-
-# Go modules
-/go.sum
-/go.mod
-
-# IDE/editor files
-.idea/
-.vscode/
-*.swp
-*.swo
-*.bak
-*.tmp
-
-# OS generated files
+/node_modules
+/.fleet
+/.idea
+/.pnp
+/.husky
+/.unikraft
+.pnp.js
 .DS_Store
+.DS_Store?
+.rollup.cache
+.cache
+.output
+.pnpm/
+.temp/
+.tmp/
 Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*tsbuildinfo
+*.bak
+coverage/
+temp/
+tmp/
+
+.husky
+.pnpm-store
+.vite-inspect
+testdata/
+vendor/
 
 # Logs
+logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Test cache
-*.testcache
+# VSCode
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
 
-# Coverage files
-*.coverprofile
-*.lcov
+# SQLite
+*.sqlite*
+*.sqlite3*
+*.db
 
-# Misc
-*.env
-.env.*
+# Projects
+_data/
+build/
+dist/
+dist-ssr/
+.astro/
+.data
+.dist
+.cache
+.output
+.client
+.build
+.react-router
+.wrangler
+go.sum*
 
-# Git
-.git/
+# Vite & Vitest config
+vite.config.*
+!vite.config.ts
+vitest.config.*
+!vitest.config.ts
+!vitest.config.mts
+vitest.workspace.*
+!vitest.workspace.ts
+!vitest.workspace.mts
 
-node_modules/
-public/
+# envars
+.env*
+!.env.example
+compose.env*
+!compose.env.example
+
+# Disable this line in your real app
+playwright/.cache/
+playwright-report/
+tests-results/
+test-results/
+blob-report/
+.playwright/
+
+# Sentry Config File
+.sentryclirc
+
+# Storybook
+*storybook.log
+storybook-static/
+
+# Miscellaneous
+pnpm-exec-summary.json
+slim.report.json
+
+# Terraform
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate*
+terraform.tfvars*
+!terraform.tfvars.example
+
+# moon
+.moon/cache
+.moon/docker
+
+# python
+__pycache__/
+
+# Specific directories for individual projects
