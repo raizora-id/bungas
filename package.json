@@ -1,30 +1,46 @@
 {
-  "name": "bungasrepo",
-  "version": "1.0.0",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "test": "vitest"
-  },
-  "devDependencies": {
-    "@types/react": "^18.2.64"
-  },
-  "dependencies": {
-    "@storybook/addon-essentials": "8.1.0",
-    "@storybook/addon-interactions": "8.1.0",
-    "@storybook/addon-links": "8.1.0",
-    "@storybook/addon-onboarding": "8.1.0",
-    "@storybook/blocks": "8.1.0",
-    "@storybook/react": "8.1.0",
-    "@storybook/react-vite": "8.1.0",
-    "@storybook/test": "8.1.0",
-    "@storybook/testing-library": "0.2.2",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.3.0",
-    "date-fns": "^4.1.0",
-    "lucide-react": "^0.503.0",
-    "react": "^19.1.0",
-    "react-dom": "^18.2.0",
-    "vitest": "^3.1.2"
-  }
+    "name": "myorg",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "moon :dev",
+        "build": "moon :build",
+        "start": "moon :start",
+        "prepare": "moon setup",
+        "lint": "moon :lint",
+        "check": "moon :check",
+        "format": "biome format . --write",
+        "cmd": "tsx --tsconfig tsconfig.json -r dotenv/config internal/cli.ts",
+        "compose:cleanup": "docker compose -f docker/compose.yaml down --remove-orphans --volumes",
+        "compose:up": "docker compose -f docker/compose.yaml up --detach --remove-orphans",
+        "compose:down": "docker compose -f docker/compose.yaml down --remove-orphans",
+        "update-deps": "npm-check-updates --configFileName .ncurc.json",
+        "cleanup": "pnpm --stream --color \"/cleanup:(?!deps|cache)/\"",
+        "cleanup:deps": "pnpm dlx rimraf pnpm-lock.yaml node_modules",
+        "cleanup:cache": "pnpm dlx rimraf .moon/cache --verbose",
+        "cleanup:apps": "pnpm run -r --stream --color cleanup",
+        "cleanup:store": "pnpm store prune --force",
+        "typecheck": "moon :typecheck"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^1.9.4",
+        "@noble/hashes": "^1.7.1",
+        "@types/node": "^22.13.1",
+        "citty": "^0.1.6",
+        "consola": "^3.4.0",
+        "dotenv": "^16.4.7",
+        "npm-check-updates": "^17.1.14",
+        "tsx": "^4.19.2"
+    },
+    "packageManager": "pnpm@10.9.0",
+    "pnpm": {
+        "onlyBuiltDependencies": [
+            "@biomejs/biome",
+            "@swc/core",
+            "better-sqlite3",
+            "core-js-pure",
+            "esbuild",
+            "sharp"
+        ]
+    }
 }
